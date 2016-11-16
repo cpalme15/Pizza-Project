@@ -1,3 +1,4 @@
+
 public class Pizza {
 private char size;
 private int cheese;
@@ -56,11 +57,18 @@ public double calcCost()
 		sizecost=10;
 	else if(size=='M')
 		sizecost=12;
-	else 
+	else if(size=='L')
 		sizecost=14;
+	else 
+		sizecost=0;
 	
-	 cost=((this.cheese*2)+(this.beef*2)+(this.pepperoni)+(sizecost)
+	 if (size=='S'||size=='M'||size=='L'){
+	 
+	 cost=((this.cheese*2)+(this.beef*2)+(this.pepperoni*2)+(sizecost)
 		);
+	 return cost;}
+	 else
+		 cost=0;
 	 return cost;
 }
 @Override
