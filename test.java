@@ -1,72 +1,89 @@
+Code  Issues 0  Pull requests 0  Pulse
+Test.java
 
+/*
+ * Programmed By: Zachariah Pelletier, Collin Palmer
+ * Machine Problem 5: Pizza order
+ * COSC 111- Khaled Mansour
+ * 11-24-16
+ * Purpose: To take an order of pizza with the number of toppings and size, and find
+ * the total cost.
+ */
+import java.util.*;
 public class Test {
 
 	public static void main(String[] args) {
-		PizzaOrder order1=new PizzaOrder();
-		
-	Pizza p1=new Pizza();
-	p1.setSize('S');
-	p1.setCheese(2);
-	p1.setBeef(3);
-	p1.setPepperoni(2);
-	p1.calcCost();
-	System.out.println("Pizza 1 is :\n"+p1);
-	
-	Pizza p2=new Pizza();
-	p2.setSize('M');
-	p2.setCheese(2);
-	p2.setBeef(3);
-	p2.setPepperoni(2);
-	p2.calcCost();
-	System.out.println("Pizza 2 is:\n"+p2);
-     
-	
-	Pizza p3=new Pizza();
-	p3.setSize('L');
-	p3.setCheese(2);
-	p3.setBeef(3);
-	p3.setPepperoni(2);
-	p3.calcCost();
-	System.out.println("Pizza 3 is:\n"+p3);
-	
-	System.out.println();
+		int numPizzas = 0;
+		Scanner k = new Scanner(System.in);
+
+		System.out.println("How many pizzas would you like (must be between 1 and 3)?");
+		numPizzas = k.nextInt();
+
+		Pizza[] order = new Pizza[numPizzas];
+
+		for(int i = 0; i<order.length; i++)
+			order[i] = new Pizza();
+
+		PizzaOrder[] order1 = new PizzaOrder[numPizzas];
+
+		for(int j = 0; j<order1.length; j++)
+			order1[j] = new PizzaOrder();
+
+		switch(numPizzas){
+		case 1:
+			order[0] = order1[1].setPizza1(order[1]);
+			order[0].setSize('S');
+			order[0].setCheese(2);
+			order[0].setBeef(3);
+			order[0].setPepperoni(2);
+			order[0].calcCost();
+			System.out.println("Pizza 1 is :\n" + order[1]);
+			break;
+		case 2:
+			order[0] = order1[1].setPizza1(order[1]);
+			order[0].setSize('S');
+			order[0].setCheese(2);
+			order[0].setBeef(3);
+			order[0].setPepperoni(2);
+			order[0].calcCost();
+			System.out.println("Pizza 1 is :\n" + order[1]);
+
+			order[1] = order1[2].setpizza2(order[2]);
+			order[1].setSize('M');
+			order[1].setCheese(2);
+			order[1].setBeef(3);
+			order[1].setPepperoni(2);
+			order[1].calcCost();
+			System.out.println("Pizza 2 is:\n" + order[2]);
+			break;
+		case 3:
+			order[0] = order1[1].setPizza1(order[1]);
+			order[0].setSize('S');
+			order[0].setCheese(2);
+			order[0].setBeef(3);
+			order[0].setPepperoni(2);
+			order[0].calcCost();
+			System.out.println("Pizza 1 is :\n" + order[1]);
+
+			order[1] = order1[2].setpizza2(order[2]);
+			order[1].setSize('M');
+			order[1].setCheese(2);
+			order[1].setBeef(3);
+			order[1].setPepperoni(2);
+			order[1].calcCost();
+			System.out.println("Pizza 2 is:\n" + order[2]);
+
+			order[2] = order1[3].setpizza3(order[3]);
+			order[2].setSize('L');
+			order[2].setCheese(2);
+			order[2].setBeef(3);
+			order[2].setPepperoni(2);
+			order[2].calcCost();
+			System.out.println("Pizza 3 is:\n" + order[3]);
+			break;
+		}
+
+		System.out.println("Your entire pizza order cost is: "+ (order[0].getCost() + order[1].getCost() + order[2].getCost()));
 	}
-
 }
-public class Test {
-
-	public static void main(String[] args) {
-		PizzaOrder order1=new PizzaOrder();
-		
-	Pizza   p1= new Pizza();
-	p1=order1.setPizza1(p1);
-	p1.setSize('S');
-	p1.setCheese(2);
-	p1.setBeef(3);
-	p1.setPepperoni(2);
-	p1.calcCost();
-	System.out.println("Pizza 1 is :\n"+p1);
-	
-	Pizza p2=new Pizza();
-	p2=order1.setpizza2(p2);
-	p2.setSize('M');
-	p2.setCheese(2);
-	p2.setBeef(3);
-	p2.setPepperoni(2);
-	p2.calcCost();
-	System.out.println("Pizza 2 is:\n"+p2);
-     
-	
-	Pizza p3=new Pizza();
-	p3=order1.setpizza3(p3);
-	p3.setSize('L');
-	p3.setCheese(2);
-	p3.setBeef(3);
-	p3.setPepperoni(2);
-	p3.calcCost();
-	System.out.println("Pizza 3 is:\n"+p3);
-	
-	System.out.println("Your entire pizza order cost is: "+order1.calcTotal());
-	}
-
-}
+ Desktop version
