@@ -1,4 +1,5 @@
 
+//Programmed By: Collin Palmer, Zachariah Pelletier.
 public class PizzaOrder {
 	private Pizza pizza1;
 	private Pizza pizza2;
@@ -35,7 +36,10 @@ public class PizzaOrder {
 	public Pizza setPizza1(Pizza p1) {
 		return pizza1 = p1;
 	}
-
+	public double getPizza1cost()
+	{
+		return pizza1.getCost();
+	}
 	public Pizza setpizza2(Pizza p2) {
 		return pizza2 =  p2;
 	}
@@ -46,7 +50,12 @@ public class PizzaOrder {
 	}
 	public double calcTotal()
 	{
-		totalcost=(pizza1.getCost()+pizza2.getCost()+pizza3.getCost());
+		switch(numPizzas){
+		case 1:totalcost=(pizza1.getCost());break;
+		case 2:totalcost=(pizza1.getCost()+pizza2.getCost());break;
+		case 3:totalcost=(pizza1.getCost()+pizza2.getCost()+pizza3.getCost());break;
+
+		}
 		return totalcost;
 	}
 }
