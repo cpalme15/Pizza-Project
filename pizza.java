@@ -1,4 +1,5 @@
 
+//Programmed By: Collin Palmer, Zachariah Pelletier.
 public class Pizza {
 	private char size;
 	private int cheese;
@@ -74,7 +75,7 @@ public class Pizza {
 	@Override
 	public String toString() {
 		return "size=" + size +"\n"+ "cheese=" + cheese +"\n"+ "pepperoni=" + pepperoni +
-				"\n"+"beef=" + beef +"\n"+ "cost="+ cost;
+				"\n"+"beef=" + beef +"\n"+ "cost=$"+ cost;
 
 	}
 }
