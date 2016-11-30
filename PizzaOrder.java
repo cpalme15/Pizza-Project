@@ -51,9 +51,9 @@ public class PizzaOrder {
 	public double calcTotal()
 	{
 		switch(numPizzas){
-		case 1:totalcost=(pizza1.getCost());break;
-		case 2:totalcost=(pizza1.getCost()+pizza2.getCost());break;
-		case 3:totalcost=(pizza1.getCost()+pizza2.getCost()+pizza3.getCost());break;
+		case 1:System.out.println("Your entire Pizza order costs:$"+(pizza1.getCost()));break;
+		case 2:System.out.println("Your entire Pizza order costs:$"+(pizza1.getCost()+pizza2.getCost()));break;
+		case 3:System.out.println("Your entire Pizza order costs:$"+(pizza1.getCost()+pizza2.getCost()+pizza3.getCost()));break;
 
 		}
 		return totalcost;
