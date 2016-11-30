@@ -81,6 +81,6 @@ public class Test {
 				break;
 			}
 
-		System.out.println("Your entire Pizza order costs:$"+order1.calcTotal()); 
+		order1.calcTotal(); 
 	}
 }
