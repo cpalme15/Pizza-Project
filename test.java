@@ -24,7 +24,7 @@ public class Test {
 
 
 
-		for(int j = 0; j<numPizzas; j++)
+		
 
 
 			switch(numPizzas){
@@ -80,7 +80,6 @@ public class Test {
 				System.out.println("Pizza 3 is:\n" + order[2]);
 				break;
 			}
-
 		order1.calcTotal(); 
 	}
 }
